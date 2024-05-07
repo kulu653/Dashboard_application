@@ -28,34 +28,39 @@ table_continent_top_50_args = dash_table.DataTable()
 
 ####################### Setting Graphs as HTML Children ##############
 
+# regional level graph for data visualization
+
 graph4 = dcc.Graph(
     id='graph4',
     figure=chart4_local_db_region,
     style={'display': 'inline-block'}
 )
 
-
+# country level graph for data visualization
 graph5 = dcc.Graph(
     id='graph5',
     figure=chart5_local_db_country,
     style={'display': 'inline-block'}
 )
 
-
+# continent level graph for data visualization
 graph6 = dcc.Graph(
     id='graph6',
     figure=chart6_local_db_continent,
     style={'display': 'inline-block'},
 )
 
+#table with all data
+
 table2 = html.Table(table2_local_db,
                     id='table2'
                     )
+#table with country lavel data
 
 table_country = html.Table(table_country_top_50_args,
                            id='table_country'
                            )
-
+#table with continent level data
 table_continent = html.Table(table_continent_top_50_args,
                              id='table_continent'
                              )
@@ -64,11 +69,15 @@ table_continent = html.Table(table_continent_top_50_args,
 ############### Creating Widgets For Each Graph #########################
 
 
+# options for dropdown menu
+
 sample_options_localdb = master_df["sample_type"].unique()
 country_options_localdb = master_df["country"].unique()
 region_options_localdb = master_df["region"].unique()
 continent_options_localdb = master_df["continent"].unique()
 
+
+#dropdown menu to select country for histogarm 
 
 dropdown5_histogram = dcc.Dropdown(
     id="dropdown5_histogram",
@@ -79,6 +88,8 @@ dropdown5_histogram = dcc.Dropdown(
     style=dict(width='50%', margin="auto"),
 )
 
+#dropdown menu to select sample type for histogram
+
 dropdown6_histogram = dcc.Dropdown(
     id="dropdown6_histogram",
     options=[{"value": label, "label": label}
@@ -87,6 +98,8 @@ dropdown6_histogram = dcc.Dropdown(
     clearable=False,
     style=dict(width='80%', margin="auto"),
 )
+
+#dropdown menu to select global region for histogram
 
 dropdown1_table2 = dcc.Dropdown(
     id="dropdown1_table2",
@@ -98,6 +111,8 @@ dropdown1_table2 = dcc.Dropdown(
 
 )
 
+#dropdown menu to select country for table
+
 dropdown_table_country = dcc.Dropdown(
     id="dropdown_table_country",
     options=[{"value": label, "label": label}
@@ -107,6 +122,8 @@ dropdown_table_country = dcc.Dropdown(
     style=dict(width='50%', margin="auto")
 )
 
+#dropdown menu to select continent for table
+
 dropdown_table_continent = dcc.Dropdown(
     id="dropdown_table_continent",
     options=[{"value": label, "label": label}
@@ -115,6 +132,8 @@ dropdown_table_continent = dcc.Dropdown(
     clearable=False,
     style=dict(width='50%', margin="auto")
 )
+
+#dropdown menu to select ARG types
 
 dropdown7_histogram = dcc.Dropdown(
     id="dropdown7_histogram",
@@ -127,6 +146,8 @@ dropdown7_histogram = dcc.Dropdown(
     clearable=False,
     style=dict(width='80%', margin="auto")
 )
+
+#switch option to view data in log scale
 
 log_switch = daq.BooleanSwitch(
     on=False,
