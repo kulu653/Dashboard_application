@@ -1,7 +1,7 @@
 # Dashboard_application
 
 ## Aim					
-My aim to creat the multipage dash application was to make a convenient all-in-one portal where the employees with minimal data science skills could easily access the up-to-date, realtime information from the database, and to have self-explanatory visualization and tables of key findings of my analyses. Viewing the data and the results were possible with few clicks (with help of graphical user interface (GUI)).
+My aim to creat the multipage dash application was to make a convenient all-in-one portal where the employees with minimal data science skills could easily access the up-to-date, realtime information from the database, and to have self-explanatory visualization and tables of key findings of my bioinformatic- and data-analyses. Viewing the data and the results were possible with few clicks (with help of graphical user interface (GUI)), making data visualization convinient.
 					
 ## Technicality				
 This multi page app is made using Dash library in python. Bootstrap was used to style the app. Plotly library was used to produce graphs. VS code IDE was used for the purpose. The dashboard_application repo has following files: 
